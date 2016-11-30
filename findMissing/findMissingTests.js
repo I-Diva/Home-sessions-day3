@@ -1,3 +1,11 @@
+// testing code goes here
+
+'use strict'
+
+var chai = require('chai');
+var expect = chai.expect;
+
+var myApp = require('./findMissing.js');
 describe("Find missing number two lists: ", function() {
 
   describe("Case for en empty list", function() {
