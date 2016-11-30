@@ -1,0 +1,19 @@
+{
+  "name": "home-sessions-day3",
+  "version": "1.0.0",
+  "description": "// testing code goes here",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/I-Diva/Home-sessions-day3.git"
+  },
+  "author": "Olayemi Awofadeju",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/I-Diva/Home-sessions-day3/issues"
+  },
+  "homepage": "https://github.com/I-Diva/Home-sessions-day3#readme"
+}
