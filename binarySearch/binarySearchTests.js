@@ -99,7 +99,7 @@ describe('Binary Search to traverse an ordered list, effectively', function() {
 
     it('should return {count: < /* array length */, index: -1} for 10000 ', function() {
       var search = tenToOneThousand.search(10000);
-      expect(search.count).to.be(search.length);
+      expect(search.count).to.equal(search.length);
       expect(search.index).to.equal(-1);
     });
 

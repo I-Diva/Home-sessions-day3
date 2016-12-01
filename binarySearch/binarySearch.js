@@ -25,20 +25,40 @@ Array.prototype.toOneThousand = function() {
   return arr;
 }
 
-Array.prototype.search = function(numbers, key) {
-  var max = numbers.length - 1;
+Array.prototype.search = function(key) {
+  var max = this.length - 1;
   var min = 0;
+  count = 0;
   while (min <= max) {
     mid = Math.floor((min + max) / 2);
-    if (numbers[mid] === key) {
-      return mid;
+    if (this[mid] === key) {
+      return {
+        index: mid,
+        count: count,
+        length: this.length
+      };
     }
 
-    if (numbers[mid] < key) {
-      min = mid + 1;
-    } else if (numbers[mid] > key) {
-      max = mid - 1;
+    if (this[min] === key) {
+      return {
+        index: min,
+        count: count,
+        length: this.length
+      }
     }
+
+    if (this[max] === key) {
+      return max;
+    }
+
+    if (this[mid] < key) {
+      min = mid + 1;
+      max = max - 1;
+    } else if (this[mid] > key) {
+      max = mid - 1;
+      min = min + 1;
+    }
+    count++;
   }
 
   return -1;
