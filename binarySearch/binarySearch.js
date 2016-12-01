@@ -1,6 +1,8 @@
 Array.prototype.toTwenty = function() {
   var arr = [];
+  var count = 0;
   for (i = 1; i <= 20; i++) {
+    count += i;
     arr.push(i);
   }
   return arr;
@@ -23,7 +25,7 @@ Array.prototype.toOneThousand = function() {
   return arr;
 }
 
-function binarySearch(numbers, key) {
+Array.prototype.search = function(numbers, key) {
   var max = numbers.length - 1;
   var min = 0;
   while (min <= max) {
@@ -41,6 +43,7 @@ function binarySearch(numbers, key) {
 
   return -1;
 }
+
 module.exports = {
   Array: Array
 };

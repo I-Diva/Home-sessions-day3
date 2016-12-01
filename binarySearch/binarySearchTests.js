@@ -40,19 +40,19 @@ describe('Binary Search to traverse an ordered list, effectively', function() {
     it('should return {count: /* <= 4 */, index: 15} for 16', function() {
       var search = oneToTwenty.search(16);
       expect(search.count).to.be.below(5);
-      expect(search.index).to.be(15);
+      expect(search.index).to.equal(15);
     });
 
     it('should return {count: < /* array length */, index: -1} for 33 ', function() {
       var search = oneToTwenty.search(33);
       expect(search.count).to.be.below(search.length);
-      expect(search.index).to.be(-1);
+      expect(search.index).to.equal(-1);
     });
   });
 
 
   it('should not contain any form of `indexOf` in the search function', function() {
-    expect(Array.prototype.search.toString().indexOf('indexOf')).to.be(-1);
+    expect(Array.prototype.search.toString().indexOf('indexOf')).to.equal(-1);
   });
 
   describe('Get the index of the item with an expected number of loops in array [2, 4 . . . 40]', function() {
@@ -60,26 +60,26 @@ describe('Binary Search to traverse an ordered list, effectively', function() {
     it('should return {count: /* <= 4 */, index: 15} for 16', function() {
       var search = twoToForty.search(16);
       expect(search.count).to.be.below(5);
-      expect(search.index).to.be(7);
+      expect(search.index).to.equal(7);
     });
 
     it('should return {count: 0, index: 9} for 20', function() {
       var search = twoToForty.search(20);
-      expect(search.count).to.be(0);
-      expect(search.index).to.be(9);
+      expect(search.count).to.equal(0);
+      expect(search.index).to.equal(9);
     });
 
 
     it('should return {count: 0, index: 19} for 40', function() {
       var search = twoToForty.search(40);
-      expect(search.count).to.be(0);
-      expect(search.index).to.be(19);
+      expect(search.count).to.equal(0);
+      expect(search.index).to.equal(19);
     });
 
     it('should return {count: < /* array length */, index: -1} for 33 ', function() {
       var search = twoToForty.search(33);
       expect(search.count).to.be.below(search.length);
-      expect(search.index).to.be(-1);
+      expect(search.index).to.equal(-1);
     });
   });
 
@@ -88,19 +88,19 @@ describe('Binary Search to traverse an ordered list, effectively', function() {
     it('should return {count: /* <= 3 */, index: 3} for 40', function() {
       var search = tenToOneThousand.search(40);
       expect(search.count).to.be.below(4);
-      expect(search.index).toBe(3);
+      expect(search.index).to.equal(3);
     });
 
     it('should return {count: /* <= 5*/, index: 87} for 800', function() {
       var search = tenToOneThousand.search(880);
       expect(search.count).to.be.below(6);
-      expect(search.index).to.be(87);
+      expect(search.index).to.equal(87);
     });
 
     it('should return {count: < /* array length */, index: -1} for 10000 ', function() {
       var search = tenToOneThousand.search(10000);
       expect(search.count).to.be(search.length);
-      expect(search.index).to.be(-1);
+      expect(search.index).to.equal(-1);
     });
 
   });
