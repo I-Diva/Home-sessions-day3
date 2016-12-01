@@ -41,11 +41,6 @@ function binarySearch(numbers, key) {
 
   return -1;
 }
-
-Array.prototype.toTwenty = function() {
-  var arr = []
-  for (i = 1; i <= 20; i++) {
-    arr.push(i);
-  }
-  return arr;
-}
+module.exports = {
+  Array: Array
+};

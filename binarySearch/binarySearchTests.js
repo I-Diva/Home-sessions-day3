@@ -3,7 +3,7 @@
 var chai = require('chai');
 var expect = chai.expect;
 
-var myApp = require('./binarySearch.js')
+var User = require('./oop.js').User;
 describe('Binary Search to traverse an ordered list, effectively', function() {
   describe('Populate the arrays with valid content', function() {
 
