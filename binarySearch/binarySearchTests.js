@@ -4,6 +4,7 @@ var chai = require('chai');
 var expect = chai.expect;
 
 var Array = require('./binarySearch.js').Array;
+console.log(Array);
 describe('Binary Search to traverse an ordered list, effectively', function() {
   describe('Populate the arrays with valid content', function() {
 
@@ -36,7 +37,6 @@ describe('Binary Search to traverse an ordered list, effectively', function() {
   });
 
   describe('Get the index of the item with an expected number of loops in array [1, 2 . . . 20]', function() {
-
     it('should return {count: /* <= 4 */, index: 15} for 16', function() {
       var search = oneToTwenty.search(16);
       expect(search.count).to.be.below(5);
@@ -56,7 +56,6 @@ describe('Binary Search to traverse an ordered list, effectively', function() {
   });
 
   describe('Get the index of the item with an expected number of loops in array [2, 4 . . . 40]', function() {
-
     it('should return {count: /* <= 4 */, index: 15} for 16', function() {
       var search = twoToForty.search(16);
       expect(search.count).to.be.below(5);
@@ -68,7 +67,6 @@ describe('Binary Search to traverse an ordered list, effectively', function() {
       expect(search.count).to.equal(0);
       expect(search.index).to.equal(9);
     });
-
 
     it('should return {count: 0, index: 19} for 40', function() {
       var search = twoToForty.search(40);
@@ -99,7 +97,7 @@ describe('Binary Search to traverse an ordered list, effectively', function() {
 
     it('should return {count: < /* array length */, index: -1} for 10000 ', function() {
       var search = tenToOneThousand.search(10000);
-      expect(search.count).to.equal(search.length);
+      expect(search.count).to.be.below(search.length);
       expect(search.index).to.equal(-1);
     });
 
