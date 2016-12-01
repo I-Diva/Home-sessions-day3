@@ -26,11 +26,11 @@ describe('Binary Search to traverse an ordered list, effectively', function() {
     });
 
     it('should create an array from 10 to 10000, with intervals of 10', function() {
-      expect(tenToOneThousand[0]).to.be(10);
-      expect(tenToOneThousand[99]).to.be(1000);
-      expect(tenToOneThousand.length).to.be(100);
+      expect(tenToOneThousand[0]).to.equal(10);
+      expect(tenToOneThousand[99]).to.equal(1000);
+      expect(tenToOneThousand.length).to.equal(100);
       for (var i = 0; i < tenToOneThousand.length - 1; i++) {
-        expect(tenToOneThousand[i + 1] - tenToOneThousand[i]).to.be(10);
+        expect(tenToOneThousand[i + 1] - tenToOneThousand[i]).to.equal(10);
       }
     });
   });
